@@ -1,0 +1,79 @@
+[
+    {
+        "model": "wilderwatch_api.wilderuser",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "bio": "",
+            "flair": "Researcher at Nashville Software School",
+            "image_url": "",
+            "is_researcher": true
+        }
+    },
+    {
+        "model": "wilderwatch_api.wilderuser",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "bio": "",
+            "flair": "Professor of Geophysics at UT Knoxville",
+            "image_url": "",
+            "is_researcher": true
+        }
+    },
+    {
+        "model": "wilderwatch_api.wilderuser",
+        "pk": 3,
+        "fields": {
+            "user": 3,
+            "bio": "",
+            "flair": "Student at UT Knoxville",
+            "image_url": "",
+            "is_researcher": false
+        }
+    },
+    {
+        "model": "wilderwatch_api.wilderuser",
+        "pk": 4,
+        "fields": {
+            "user": 4,
+            "bio": "",
+            "flair": "Post Doc at Harvard",
+            "image_url": "",
+            "is_researcher": true
+        }
+    },
+    {
+        "model": "wilderwatch_api.wilderuser",
+        "pk": 5,
+        "fields": {
+            "user": 5,
+            "bio": "",
+            "flair": "",
+            "image_url": "",
+            "is_researcher": false
+        }
+    },
+    {
+        "model": "wilderwatch_api.wilderuser",
+        "pk": 6,
+        "fields": {
+            "user": 6,
+            "bio": "",
+            "flair": "",
+            "image_url": "",
+            "is_researcher": false
+        }
+    },
+    {
+        "model": "wilderwatch_api.wilderuser",
+        "pk": 7,
+        "fields": {
+            "user": 7,
+            "bio": "",
+            "flair": "",
+            "image_url": "",
+            "is_researcher": false
+        }
+    }
+]

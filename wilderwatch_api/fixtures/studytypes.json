@@ -1,0 +1,37 @@
+[
+    {
+        "model": "wilderwatch_api.studytype",
+        "pk": 1,
+        "fields": {
+            "label": "Environmental"
+        }
+    },
+    {
+        "model": "wilderwatch_api.studytype",
+        "pk": 2,
+        "fields": {
+            "label": "Biodiversity"
+        }
+    },
+    {
+        "model": "wilderwatch_api.studytype",
+        "pk": 3,
+        "fields": {
+            "label": "historical/archaeological"
+        }
+    },
+    {
+        "model": "wilderwatch_api.studytype",
+        "pk": 4,
+        "fields": {
+            "label": "Geological"
+        }
+    },
+    {
+        "model": "wilderwatch_api.studytype",
+        "pk": 5,
+        "fields": {
+            "label": "Ecological"
+        }
+    }
+]

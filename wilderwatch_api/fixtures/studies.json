@@ -1,0 +1,19 @@
+[
+    {
+        "model": "wilderwatch_api.study",
+        "pk": 1,
+        "fields": {
+            "author": 4,
+            "title": "",
+            "subject": "",
+            "summary": "Monarch migration is one of nature's greatest wonders. Near summer's end, these gorgeous butterflies begin to migrate from breeding habitat in Ontario to their overwintering grounds in Mexico. This southbound migration is completed by a single monarch generation, called the 'supergeneration', who travel approximately 3000 km from Ontario to Mexico.",
+            "details": "In Ontario, we still need to know more about the migratory routes and habits of monarchs. We need your assistance to collect information about migratory monarchs! Your observations will be used to develop scientific models to help predict the locations of monarch fly-ways and where roosts occur throughout Ontario. Knowledge of the migratory routes and roosting habits of monarchs will help us direct resources to aid this at-risk species. In other words, you're contributing to a critical research project and your efforts will aid in conservation and restoration efforts to help migratory monarchs! If you observe a Monarch roost, remember to add it to this project!",
+            "start_date": "2023-09-07",
+            "end_date": null,
+            "is_complete": false,
+            "study_type": 5,
+            "region": 7,
+            "image_url": "https://images.unsplash.com/photo-1623615412998-c63b6d5fe9be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
+        }
+    }
+]

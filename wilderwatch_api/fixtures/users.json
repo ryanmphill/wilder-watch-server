@@ -1,0 +1,128 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$6OlmYXOSLxBYGLXHgrFaJT$BqoR4ZBlDs+tz8IMofdoaPbkGUfQmVcP5CuOS0sTFsM=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "ryanmphill",
+            "first_name": "Ryan",
+            "last_name": "Phillips",
+            "email": "rphillips@middleearthstate.edu",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2022-10-21T21:15:55.764Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$uaYrJ9nNXYLDHkOcGevG4C$dyIopc5Pv1WkgIzim8OO1qkggaAnkTo0L9yHJZth6RM=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "willbrown",
+            "first_name": "William",
+            "last_name": "Brown",
+            "email": "wbrown@example.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2022-10-21T21:16:33.812Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$p0JWYs72ebn7Hubv2gF1bl$LZ+4NELHiGWCarauLmxcdd8z1wfzkjTwcLwomZCEtG0=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "sophiadavis",
+            "first_name": "Sophia",
+            "last_name": "Davis",
+            "email": "sdavis@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2022-10-21T21:17:24.322Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 4,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$YRRCEaAvpLzDKtYuhXLMrZ$HPq3ZtPhfTqWtN8PWJoiETbHXVVRpov8UmqDC+jWo8o=",
+            "last_login": null,
+            "is_superuser": true,
+            "username": "avasmith",
+            "first_name": "Ava",
+            "last_name": "Smith",
+            "email": "asmith@example.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2022-10-21T21:18:12.946Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 5,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$ondp418mLvb3t4DyD7FgUR$k+I34yX8utKGgT/eNrJNGzYUZfnOBSTxRjc0qfxuz94=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "jameslee",
+            "first_name": "James",
+            "last_name": "Lee",
+            "email": "jlee@example.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2022-10-21T21:18:55.741Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 6,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$1b4ZrlXbY6s4mxeWpILdbB$/cC2E9Kicj2kq085xgeengc/fpdAf44Y4a0nO22T4Bw=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "ameliajackson",
+            "first_name": "Amelia",
+            "last_name": "Jackson",
+            "email": "ajackson@example.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2022-10-21T21:19:24.892Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 7,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$ozUaDC4WfSd8DtqVcnlG9F$6uPupe6GDEIfu7jSq1bhKNtOnthHRzB3m0G6T8ko3u4=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "jacobmartinez",
+            "first_name": "Jacob",
+            "last_name": "Martinez",
+            "email": "jmartinez@example.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2022-10-21T21:19:24.892Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    }
+]

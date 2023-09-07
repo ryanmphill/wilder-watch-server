@@ -1,0 +1,41 @@
+[
+    {
+        "model": "wilderwatch_api.wilderuserstudyobservation",
+        "pk": 1,
+        "fields": {
+            "participant": 1,
+            "study": 1,
+            "latitude": 43.852703,
+            "longitude": -78.880399,
+            "description": "",
+            "image": "",
+            "date": "2023-08-20"
+        }
+    },
+    {
+        "model": "wilderwatch_api.wilderuserstudyobservation",
+        "pk": 2,
+        "fields": {
+            "participant": 2,
+            "study": 1,
+            "latitude": 44.55806007,
+            "longitude": -77.29758726,
+            "description": "",
+            "image": "",
+            "date": "2023-08-21"
+        }
+    },
+    {
+        "model": "wilderwatch_api.wilderuserstudyobservation",
+        "pk": 3,
+        "fields": {
+            "participant": 3,
+            "study": 1,
+            "latitude": 44.1633409193,
+            "longitude": -77.3594509861,
+            "description": "",
+            "image": "",
+            "date": "2023-08-23"
+        }
+    }
+]
