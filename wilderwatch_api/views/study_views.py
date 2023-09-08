@@ -80,23 +80,43 @@ class StudyView(ViewSet):
             current_wilder_user = WilderUser.objects.get(user=request.auth.user)
 
             study = Study.objects.get(
-                pk=pk, author=current_wilder_user)
+                pk=pk)
             
-            study.title=request.data['title']
-            study.subject=request.data['subject']
-            study.summary=request.data['summary']
-            study.details=request.data['details']
-            study.start_date=request.data['startDate']
-            study.end_date=end_date
-            study.study_type=study_type_instance
-            study.region=region
-            study.image_url=image_url
+            if study.author == current_wilder_user:
+            
+                study.title=request.data['title']
+                study.subject=request.data['subject']
+                study.summary=request.data['summary']
+                study.details=request.data['details']
+                study.start_date=request.data['startDate']
+                study.end_date=end_date
+                study.study_type=study_type_instance
+                study.region=region
+                study.image_url=image_url
 
-            study.save()
-            return Response(None, status=status.HTTP_204_NO_CONTENT)
+                study.save()
+                return Response(None, status=status.HTTP_204_NO_CONTENT)
+            else:
+                return Response({'message': "You can only edit your own studies"}, status=status.HTTP_403_FORBIDDEN)
+
         except ValidationError as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_400_BAD_REQUEST)
         except Study.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
         except KeyError as ex:
             return Response({'message': f"{ex.args[0]} is required"}, status=status.HTTP_400_BAD_REQUEST)
+    
+    def destroy(self, request, pk):
+        """Delete a Study"""
+        try:
+            current_wilder_user = WilderUser.objects.get(user=request.auth.user)
+
+            study = Study.objects.get(
+                pk=pk)
+            if study.author == current_wilder_user:
+                study.delete()
+                return Response(None, status=status.HTTP_204_NO_CONTENT)
+            else:
+                return Response({'message': "You can only delete your own studies"}, status=status.HTTP_403_FORBIDDEN)
+        except Study.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
