@@ -5,8 +5,8 @@ from rest_framework.decorators import action, permission_classes
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.exceptions import ValidationError
 from django.core.exceptions import ValidationError
-from wilderwatch_api.models import (Study, WilderUser, Region, StudyType)
-from wilderwatch_api.serializers import (StudySerializer)
+from wilderwatch_api.models import (Study, WilderUser, Region, StudyType, WilderUserStudyObservation)
+from wilderwatch_api.serializers import (StudySerializer, ObservationSerializer)
 
 class StudyView(ViewSet):
     """Handle requests for studies
@@ -120,3 +120,26 @@ class StudyView(ViewSet):
                 return Response({'message': "You can only delete your own studies"}, status=status.HTTP_403_FORBIDDEN)
         except Study.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+    
+    @action(methods=['post'], detail=True)
+    def add_observation(self, request, pk):
+        """Add an observation to the selected study"""
+        try:
+            participant = WilderUser.objects.get(user=request.auth.user)
+            study = Study.objects.get(pk=pk)
+
+            observation = WilderUserStudyObservation.objects.create(
+                participant=participant,
+                study=study,
+                latitude=request.data['latitude'],
+                longitude=request.data['longitude'],
+                description=request.data['description'],
+                image=request.data['image'],
+                date=request.data['date']
+            )
+            serializer = ObservationSerializer(observation)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        except ValidationError as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_400_BAD_REQUEST)
+        except KeyError as ex:
+            return Response({'message': f"{ex.args[0]} is required"}, status=status.HTTP_400_BAD_REQUEST)
