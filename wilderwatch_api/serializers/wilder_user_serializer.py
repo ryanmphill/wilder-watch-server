@@ -7,6 +7,14 @@ class WilderUserSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = WilderUser
+        fields = ('id', 'user', 'bio', 'flair', 'image_url', 'is_researcher', 'full_name')
+        depth = 1
+
+class WilderUserObservationsSerializer(serializers.ModelSerializer):
+    user = UserSerializer(many=False)
+    
+    class Meta:
+        model = WilderUser
         fields = ('id', 'user', 'bio', 'flair', 'image_url', 'is_researcher', 'full_name', 
                   'observations')
         depth = 1
