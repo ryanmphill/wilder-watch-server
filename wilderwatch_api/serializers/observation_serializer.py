@@ -1,10 +1,10 @@
 from rest_framework import serializers
 from wilderwatch_api.models import WilderUserStudyObservation
-from wilderwatch_api.serializers import wilder_user_serializer
+from wilderwatch_api.serializers import WilderUserSerializer
 
 class ObservationSerializer(serializers.ModelSerializer):
 
-    participant = wilder_user_serializer(many=False)
+    participant = WilderUserSerializer(many=False)
     
     class Meta:
         model = WilderUserStudyObservation

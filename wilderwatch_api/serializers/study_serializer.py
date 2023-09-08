@@ -8,9 +8,6 @@ from wilderwatch_api.serializers.observation_serializer import ObservationSerial
 class StudySerializer(serializers.ModelSerializer):
 
     author = WilderUserSerializer(many=False)
-    study_type = StudyTypeSerializer(many=False)
-    region = RegionSerializer(many=False)
-    observations = ObservationSerializer(many=True)
     
     class Meta:
         model = Study
