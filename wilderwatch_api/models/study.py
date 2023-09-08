@@ -11,4 +11,4 @@ class Study(models.Model):
     is_complete = models.BooleanField(default=False)
     study_type = models.ForeignKey("StudyType", on_delete=models.DO_NOTHING, related_name="studies")
     region = models.ForeignKey("Region", on_delete=models.DO_NOTHING, related_name="studies")
-    image_url = models.CharField(max_length=700, blank=True, null=True)
+    image_url = models.CharField(max_length=700, null=True, default="https://images.unsplash.com/photo-1619468129361-605ebea04b44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80")
