@@ -6,7 +6,7 @@
             "user": 1,
             "bio": "",
             "flair": "Researcher at Nashville Software School",
-            "image_url": "",
+            "image_url": "https://st3.depositphotos.com/6672868/13701/v/600/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
             "is_researcher": true
         }
     },
@@ -17,7 +17,7 @@
             "user": 2,
             "bio": "",
             "flair": "Professor of Geophysics at UT Knoxville",
-            "image_url": "",
+            "image_url": "https://st3.depositphotos.com/6672868/13701/v/600/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
             "is_researcher": true
         }
     },
@@ -28,7 +28,7 @@
             "user": 3,
             "bio": "",
             "flair": "Student at UT Knoxville",
-            "image_url": "",
+            "image_url": "https://st3.depositphotos.com/6672868/13701/v/600/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
             "is_researcher": false
         }
     },
@@ -39,7 +39,7 @@
             "user": 4,
             "bio": "",
             "flair": "Post Doc at Harvard",
-            "image_url": "",
+            "image_url": "https://st3.depositphotos.com/6672868/13701/v/600/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
             "is_researcher": true
         }
     },
@@ -50,7 +50,7 @@
             "user": 5,
             "bio": "",
             "flair": "",
-            "image_url": "",
+            "image_url": "https://st3.depositphotos.com/6672868/13701/v/600/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
             "is_researcher": false
         }
     },
@@ -61,7 +61,7 @@
             "user": 6,
             "bio": "",
             "flair": "",
-            "image_url": "",
+            "image_url": "https://st3.depositphotos.com/6672868/13701/v/600/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
             "is_researcher": false
         }
     },
@@ -72,7 +72,7 @@
             "user": 7,
             "bio": "",
             "flair": "",
-            "image_url": "",
+            "image_url": "https://st3.depositphotos.com/6672868/13701/v/600/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
             "is_researcher": false
         }
     }
