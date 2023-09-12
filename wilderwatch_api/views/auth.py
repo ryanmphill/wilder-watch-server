@@ -68,7 +68,12 @@ def register_user(request):
         # Use the REST Framework's token generator on the new user account
         token = Token.objects.create(user=wilder_user.user)
         # Return the token to the client
-        data = { 'token': token.key }
+        data = {
+            'valid': True,
+            'token': token.key,
+            'isStaff': new_user.is_staff,
+            'isResearcher': wilder_user.is_researcher
+        }
     except IntegrityError:
         data = { 'message': "Username already taken" }
     except KeyError as ex:
