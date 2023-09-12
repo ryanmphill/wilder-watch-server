@@ -22,6 +22,8 @@ from wilderwatch_api import views
 router = DefaultRouter(trailing_slash=False)
 router.register(r'studies', views.StudyView, 'study')
 router.register(r'users', views.WilderUserView, 'user')
+router.register(r'study_types', views.StudyTypeView, 'study_type')
+router.register(r'regions', views.RegionView, 'region')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
