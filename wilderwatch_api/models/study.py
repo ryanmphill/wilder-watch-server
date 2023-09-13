@@ -6,7 +6,7 @@ class Study(models.Model):
     subject = models.CharField(max_length=75)
     summary = models.CharField(max_length=7500)
     details = models.CharField(max_length=7500)
-    start_date = models.DateField(auto_now_add=True)
+    start_date = models.DateField()
     end_date = models.DateField(null=True)
     is_complete = models.BooleanField(default=False)
     study_type = models.ForeignKey("StudyType", on_delete=models.DO_NOTHING, related_name="studies")

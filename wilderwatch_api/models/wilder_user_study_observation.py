@@ -8,3 +8,7 @@ class WilderUserStudyObservation(models.Model):
     description = models.CharField(max_length=7500)
     image = models.CharField(max_length=500, null=True)
     date = models.DateField()
+
+    @property
+    def participant_name(self):
+        return self.participant.full_name
