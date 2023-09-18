@@ -13,5 +13,6 @@ class StudySerializer(serializers.ModelSerializer):
     class Meta:
         model = Study
         fields = ('id', 'title', 'author', 'subject', 'summary', 'details', 'start_date', 'end_date',
-                  'is_complete', 'study_type', 'region', 'image_url', 'observations')
+                  'is_complete', 'study_type', 'region', 'image_url', 'observations', 'average_longitude',
+                  'average_latitude')
         depth = 1
