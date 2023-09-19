@@ -30,3 +30,39 @@ class Study(models.Model):
             return sum(list_of_latitudes) / len(list_of_latitudes)
         else:
             return 0  # Handle the case where there are no related objects
+    
+    @property
+    def furthest_coordinate(self):
+        # Get list of coorinates for the study
+        list_of_coordinates = self.observations.values_list('longitude', 'latitude', flat=False)
+        # Check if list_of_coordinates is valid
+        if list_of_coordinates is not None and len(list_of_coordinates) >= 1:
+            # Get the center values defined in previos @property decorators
+            center_lon = self.average_longitude
+            center_lat = self.average_latitude
+            #Initialize variables to track furthest distance from center point
+            furthest_point = None
+            max_distance_squared = 0
+            # Calculate distances
+            for lon, lat in list_of_coordinates:
+                distance_squared = (lon - center_lon)**2 + (lat - center_lat)**2
+                if distance_squared >= max_distance_squared:
+                    max_distance_squared = distance_squared
+                    furthest_point = (lon, lat)
+            return furthest_point
+        else:
+            return None
+
+    @property
+    def furthest_longitude(self):
+        if self.furthest_coordinate:
+            return self.furthest_coordinate[0]
+        else:
+            return None
+    
+    @property
+    def furthest_latitude(self):
+        if self.furthest_coordinate:
+            return self.furthest_coordinate[1]
+        else:
+            return None
