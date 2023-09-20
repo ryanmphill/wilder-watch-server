@@ -6,7 +6,7 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.exceptions import ValidationError
 from django.core.exceptions import ValidationError
 from wilderwatch_api.models import ( WilderUser )
-from wilderwatch_api.serializers import ( WilderUserSerializer )
+from wilderwatch_api.serializers import ( WilderUserSerializer, WilderUserObservationsSerializer )
 
 class WilderUserView(ViewSet):
     """Handle requests for users
@@ -24,7 +24,7 @@ class WilderUserView(ViewSet):
         """Get a single user"""
         try:
             wilder_user = WilderUser.objects.get(pk=pk)
-            serializer = WilderUserSerializer(wilder_user)
+            serializer = WilderUserObservationsSerializer(wilder_user)
             return Response(serializer.data)
         except WilderUser.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)

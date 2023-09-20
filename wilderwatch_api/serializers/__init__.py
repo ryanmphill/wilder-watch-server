@@ -1,4 +1,5 @@
 from .wilder_user_serializer import WilderUserSerializer
+from .wilder_user_serializer import WilderUserObservationsSerializer
 from .user_serializer import UserSerializer
 from .study_type_serializer import StudyTypeSerializer
 from .study_serializer import StudySerializer
