@@ -5,8 +5,8 @@ from rest_framework.decorators import action, permission_classes
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.exceptions import ValidationError
 from django.core.exceptions import ValidationError
-from wilderwatch_api.models import ( WilderUser )
-from wilderwatch_api.serializers import ( WilderUserSerializer, WilderUserObservationsSerializer )
+from wilderwatch_api.models import ( WilderUser, WilderUserStudyObservation, Study )
+from wilderwatch_api.serializers import ( WilderUserSerializer, WilderUserObservationsSerializer, StudySerializer )
 
 class WilderUserView(ViewSet):
     """Handle requests for users
@@ -37,5 +37,22 @@ class WilderUserView(ViewSet):
             current_wilder_user = WilderUser.objects.get(user=request.auth.user)
             serializer = WilderUserSerializer(current_wilder_user)
             return Response(serializer.data)
+        except WilderUser.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+    
+    @action(methods=['get'], detail=True)
+    def participated_studies(self, request, pk):
+        """Retrieve studies that the specified user has participated in"""
+        try:
+            participant = WilderUser.objects.get(pk=pk)
+            participant_observations = WilderUserStudyObservation.objects.filter(participant=participant)
+
+            unique_study_ids = set()
+            for observation in participant_observations:
+                unique_study_ids.add(observation.study_id)
+            
+            studies = Study.objects.filter(id__in=unique_study_ids)
+            serializer = StudySerializer(studies, many=True)
+            return Response(serializer.data, status=status.HTTP_200_OK)
         except WilderUser.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
