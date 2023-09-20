@@ -12,3 +12,7 @@ class WilderUserStudyObservation(models.Model):
     @property
     def participant_name(self):
         return self.participant.full_name
+
+    @property
+    def study_title(self):
+        return self.study.title
