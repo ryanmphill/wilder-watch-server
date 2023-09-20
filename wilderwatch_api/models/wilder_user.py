@@ -1,4 +1,5 @@
 from django.db import models
+from django.db import connection
 from django.contrib.auth.models import User
 
 
@@ -24,3 +25,23 @@ class WilderUser(models.Model):
     @property
     def authored_studies_count(self):
         return self.studies_created.count()
+    
+    @property
+    def studies_participated_count(self):
+        query = """
+            SELECT COUNT(DISTINCT study_id)
+            FROM wilderwatch_api_wilderuserstudyobservation
+            WHERE participant_id = %s
+        """
+
+        # Execute the raw SQL query with the user's id
+        with connection.cursor() as cursor:
+            cursor.execute(query, (self.id,))
+            result = cursor.fetchone()
+
+        # Return the count of distinct studies
+        if result is not None:
+            # extract the value from the tuple
+            return result[0]
+        else:
+            return 0

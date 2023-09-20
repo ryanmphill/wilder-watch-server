@@ -16,5 +16,6 @@ class WilderUserObservationsSerializer(serializers.ModelSerializer):
     class Meta:
         model = WilderUser
         fields = ('id', 'user', 'bio', 'flair', 'image_url', 'is_researcher', 'full_name', 
-                  'observations', 'date_joined', 'observation_count', 'authored_studies_count')
+                  'observations', 'date_joined', 'observation_count', 'authored_studies_count',
+                  'studies_participated_count')
         depth = 1
