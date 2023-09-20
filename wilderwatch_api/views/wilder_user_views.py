@@ -56,3 +56,14 @@ class WilderUserView(ViewSet):
             return Response(serializer.data, status=status.HTTP_200_OK)
         except WilderUser.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+        
+    @action(methods=['get'], detail=True)
+    def authored_studies(self, request, pk):
+        """Retrieve studies that the specified user has authored"""
+        try:
+            participant = WilderUser.objects.get(pk=pk)
+            studies = Study.objects.filter(author=participant)
+            serializer = StudySerializer(studies, many=True)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except WilderUser.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
