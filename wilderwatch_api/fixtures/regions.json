@@ -68,5 +68,54 @@
         "fields": {
             "label": "Asia > China"
         }
+    },
+    {
+        "model": "wilderwatch_api.region",
+        "pk": 11,
+        "fields": {
+            "label": "Asia > Middle East"
+        }
+    },
+    {
+        "model": "wilderwatch_api.region",
+        "pk": 11,
+        "fields": {
+            "label": "Asia > Southeast"
+        }
+    },
+    {
+        "model": "wilderwatch_api.region",
+        "pk": 12,
+        "fields": {
+            "label": "Asia > North"
+        }
+    },
+    {
+        "model": "wilderwatch_api.region",
+        "pk": 13,
+        "fields": {
+            "label": "Africa > West"
+        }
+    },
+    {
+        "model": "wilderwatch_api.region",
+        "pk": 14,
+        "fields": {
+            "label": "Africa > East"
+        }
+    },
+    {
+        "model": "wilderwatch_api.region",
+        "pk": 15,
+        "fields": {
+            "label": "Africa > South"
+        }
+    },
+    {
+        "model": "wilderwatch_api.region",
+        "pk": 16,
+        "fields": {
+            "label": "Central America"
+        }
     }
 ]
