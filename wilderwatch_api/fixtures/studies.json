@@ -15,5 +15,56 @@
             "region": 7,
             "image_url": "https://images.unsplash.com/photo-1623615412998-c63b6d5fe9be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
         }
+    },
+    {
+        "model": "wilderwatch_api.study",
+        "pk": 2,
+        "fields": {
+            "author": 1,
+            "title": "Otter Spotter",
+            "subject": "River Otter",
+            "summary": "River otters were eliminated from the Smokies by the early 1900s due to habitat destruction and uncontrolled trapping for their valuable fur. In 1986, the National Park Service began a reintroduction program, and over the course of 8 years, 137 otters from North Carolina, South Carolina, and Louisiana were trapped and released into various drainages in the Smoky Mountains. Initial monitoring efforts showed that the otters took well to their new homes, but no long-term monitoring program was established.",
+            "details": "The otters have quietly lived and reproduced here, protected from trapping and slowly filling their niche as top predators in our mountain streams. Today they are believed to be present in every drainage of the Smokies, but we don't know how many there are or how they are distributed. That's where we come in! As you're out enjoying the Smokies, post your observations of otters or otter signs (scat and tracks) on our Otter Spotter project page using WilderWatch. If you're not sure what you saw, be sure to 'request ID help.' If you saw an otter but weren't able to snap a photo, no worries! You can still post an observation describing what you saw. Be sure to indicate an accurate location on the observation map. If you found otter scat or tracks, post a photo!",
+            "start_date": "2023-09-08",
+            "end_date": null,
+            "is_complete": false,
+            "study_type": 5,
+            "region": 6,
+            "image_url": "https://images.unsplash.com/photo-1567792825717-84dcd666b715?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        }
+    },
+    {
+        "model": "wilderwatch_api.study",
+        "pk": 3,
+        "fields": {
+            "author": 3,
+            "title": "Frog Finder",
+            "subject": "Endangered Frogs",
+            "summary": "Frogs need our help! Following bushfires, floods and a host of other threats including water pollution and disease, our frogs really have their back against the wall. Frog Find uses frog pictures taken around streams, ponds and wetlands to work out who is living where. We have put recorders in places where frogs were historically detected and new places where we might expect to find them. Now we need your eyes to help us in this detective work!",
+            "details": "In just 30 seconds you can tell us whether there is a threatened frog calling at one of our sites! And you don't need to be an expert - we will help you along the way. Thanks to the help of local community groups we have been able to increase our monitoring programs to include areas in and around national parks and even right in people's backyards!",
+            "start_date": "2023-09-05",
+            "end_date": null,
+            "is_complete": false,
+            "study_type": 2,
+            "region": 1,
+            "image_url": "https://images.unsplash.com/photo-1502780402662-acc01c084a25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1808&q=80"
+        }
+    },
+    {
+        "model": "wilderwatch_api.study",
+        "pk": 4,
+        "fields": {
+            "author": 2,
+            "title": "Bee Conservancy",
+            "subject": "Endangered Bees",
+            "summary": "Of the 4,000 species of bees in North America, 1 in 4 is at risk of extinction. You can help them by participating in our Community Science Projects. Armed with curiosity, a mobile device, and the WilderWatch app, you'll find and photograph pollinators and their habitat in your area and share them with more than one million scientists, researchers, and naturalists. Whether you explore solo, with friends and family, or colleagues and community groups, the data you collect will help track local bee diversity around the world.",
+            "details": "An observation records an encounter with an individual organism at a particular time and location. This includes encounters with signs of organisms like tracks, nests, or things that just died. When you make an observation, you'll record: Who you are, what you saw, where you saw it, when you saw it, evidence of what you saw. Remember, you should make separate observations for each separate organism you encounter.",
+            "start_date": "2023-09-08",
+            "end_date": null,
+            "is_complete": false,
+            "study_type": 2,
+            "region": 1,
+            "image_url": "https://images.unsplash.com/photo-1568526381923-caf3fd520382?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+        }
     }
 ]
