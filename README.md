@@ -10,6 +10,8 @@ _**Note**: If you are interested in pulling the wilder-watch-api down to run **l
 ### Authentication
 #### `POST` `/login`
 
+_Authenticates an existing user_
+
 Body:
 ```JSON
 {
@@ -28,6 +30,8 @@ Response `200`:
 ```
 
 #### `POST` `/register`
+
+_Registers a new user_
 
 Body:
 ```JSON
@@ -53,6 +57,8 @@ Response `200`:
 
 #### `GET` `/regions`
 
+_Retrieves all regions_
+
 Response `200`:
 
 ```JSON
@@ -70,6 +76,10 @@ Response `200`:
 
 #### `GET` `/regions/{pk}`
 
+_Retrieves single region_
+
+Response `200`:
+
 ```JSON
 {
     "id": "integer",
@@ -80,6 +90,8 @@ Response `200`:
 ### Study Types
 
 #### `GET` `/study_types`
+
+_Retrieves all study types_
 
 Response `200`:
 
@@ -98,6 +110,10 @@ Response `200`:
 
 #### `GET` `/study_types/{pk}`
 
+_Retrieves single study type_
+
+Response `200`:
+
 ```JSON
 {
     "id": "integer",
@@ -108,6 +124,8 @@ Response `200`:
 ### Studies
 
 #### `GET` `/studies`
+
+_Retrieves all studies_
 
 Response `200`:
 
@@ -170,6 +188,8 @@ Response `200`:
 
 #### `GET` `/studies/{pk}`
 
+_Retrieves single study_
+
 Response `200`:
 
 ```JSON
@@ -228,6 +248,8 @@ Response `200`:
 ```
 
 #### `POST` `/studies`
+
+_Creates a new study_
 
 Headers:
 
@@ -310,6 +332,8 @@ Response `201 Created`:
 
 #### `PUT` `/studies/{pk}`
 
+_Updates an existing study_
+
 Headers:
 
 ```
@@ -336,6 +360,8 @@ Response: `204 No Content`
 
 #### `DELETE` `/studies/{pk}`
 
+_Deletes an existing study_
+
 Headers:
 
 ```
@@ -347,6 +373,8 @@ Headers:
 Response: `204 No Content`
 
 #### `POST` `/studies/{pk}/add_observation`
+
+_Adds an observation to an existing study_
 
 Headers:
 
@@ -387,6 +415,8 @@ Response `201 Created`:
 
 #### `GET` `/users`
 
+_Retrieves all users_
+
 Response `200`:
 
 ```JSON
@@ -411,6 +441,8 @@ Response `200`:
 
 #### `GET` `/users/{pk}`
 
+_Retrieves single user_
+
 Response `200`:
 
 ```JSON
@@ -432,6 +464,8 @@ Response `200`:
 ```
 
 #### `GET` `/users/{pk}/participated_studies`
+
+_Retrieves all studies that a user has participated in_
 
 Response `200`:
 
@@ -493,6 +527,8 @@ Response `200`:
 ```
 
 #### `GET` `/users/{pk}/authored_studies`
+
+_Retrieves all studies that a user has authored_
 
 Response `200`:
 
