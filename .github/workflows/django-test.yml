@@ -10,6 +10,8 @@ jobs:
   build:
 
     runs-on: ubuntu-22.04
+    env:
+        MY_SECRET_KEY: 'django-insecure-$35@um2if7!lqu7&goepgt80osq7yzj=#(he!5=e3b&228dz0a'
     strategy:
       max-parallel: 4
       matrix:
