@@ -1,4 +1,8 @@
+###### <p align="right">![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/ryanmphill/wilder-watch-server/django-test.yml?label=Tests)
+</p> 
+
 # Wilder Watch API
+
 This is the API intended for use in production with the [WilderWatch Client](https://github.com/ryanmphill/wilder-watch-client) built with Python and Django. 
 
 _**Note**: If you are interested in pulling the wilder-watch-api down to run **locally**, you will need to use the [demo version](https://github.com/ryanmphill/wilder-watch-demo-server) that uses a generic `SECRET_KEY` for development purposes_
