@@ -78,4 +78,4 @@ def register_user(request):
         data = { 'message': "Username already taken" }
     except KeyError as ex:
             return Response({'message': f"{ex.args[0]} is required"}, status=status.HTTP_400_BAD_REQUEST)
-    return Response(data)
+    return Response(data, status=status.HTTP_201_CREATED)
