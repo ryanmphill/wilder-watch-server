@@ -9,6 +9,10 @@ _**Note**: If you are interested in pulling the wilder-watch-api down to run **l
 
 [Click here for WilderWatch demo server](https://github.com/ryanmphill/wilder-watch-demo-server)
 
+## API Url
+
+`https://wilder-watch-api-iknch.ondigitalocean.app/`
+
 ## Endpoints
 
 ### Authentication
