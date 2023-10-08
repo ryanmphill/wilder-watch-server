@@ -12,6 +12,9 @@ jobs:
     runs-on: ubuntu-22.04
     env:
         MY_SECRET_KEY: 'django-insecure-$35@um2if7!lqu7&goepgt80osq7yzj=#(he!5=e3b&228dz0a'
+        DEBUG: True
+        DJANGO_ALLOWED_HOSTS: '.localhost,127.0.0.1,[::1]'
+        DEVELOPMENT_MODE: True
     strategy:
       max-parallel: 4
       matrix:
